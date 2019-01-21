@@ -26,7 +26,7 @@ namespace WinTail
         }
         #endregion
 
-        #region Error messages
+        #region Reason messages
 
         public class InputError
         {

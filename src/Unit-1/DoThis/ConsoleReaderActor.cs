@@ -25,17 +25,20 @@ namespace WinTail
             {
                 DoPrintInstructions();
             }
+
             GetAndValidateInput();
         }
 
         private void GetAndValidateInput()
         {
             var message = Console.ReadLine();
-            if (!string.IsNullOrEmpty(message) && String.Equals(message, ExitCommand, StringComparison.OrdinalIgnoreCase))
+            if (!string.IsNullOrEmpty(message) &&
+                String.Equals(message, ExitCommand, StringComparison.OrdinalIgnoreCase))
             {
                 Context.System.Terminate();
                 return;
             }
+
             _validationActor.Tell(message);
 
         }
@@ -47,11 +50,7 @@ namespace WinTail
 
         private void DoPrintInstructions()
         {
-            Console.WriteLine("Write whatever you want into the console!");
-            Console.WriteLine("Some entries will pass validation, and some won't...\n\n");
-            Console.WriteLine("Type 'exit' to quit this application at any time.\n");
+            Console.WriteLine("Please provide URI of file on disk. \n");
         }
-
-
     }
 }

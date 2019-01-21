@@ -183,3 +183,4 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 /src/Unit-1/DoThis/.vs/WinTail/v15/Server/sqlite3
+/src/Unit-2/DoThis/.vs/SystemCharting/v15/Server/sqlite3
